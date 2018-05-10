@@ -1,0 +1,30 @@
+@import "_flex-props";
+
+.btn{
+    height: 30px;
+    width: 100px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+    @extend .flex-center;
+}
+.buttons{
+    @extend .flex-start;
+    .btn-cancel{
+        background: rgb(254,124,111);
+        border: solid rgb(255, 83, 67) 1px;
+    }
+    .btn-add{
+        background: rgb(110,204,254);
+        border: solid rgb(57, 184, 253) 1px;
+    }
+    .btn-delete{
+        background: rgb(254,124,111);
+        border: solid rgb(255, 83, 67) 1px;
+    }
+    .btn-edit{
+        background: rgb(110,204,254);
+        border: solid rgb(57, 184, 253) 1px;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Start view of the application</title>
+    <!-- <script src="js/movies.js"></script>
+    <script src="js/fullMovies.js"></script>
+    <script src="js/editMovies.js"></script> -->
+    <script src="js/showForm.js"></script>
+    <script src="js/lastjs/generateInitialMovies.js"></script>
+    <script src="js/lastjs/drawMovies.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Films library</h1>
+        </div>
+        <div class="main">
+            <div class="icon" onclick="showForm()">
+                <img src="images/icons/icon-plus.png" alt="">
+            </div>
+            <p>Add new film</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="form_editMovies" hidden style="position: fixed;">
+                    <form action='#' method="post" class='reg-form'>
+                        <div class='form-row'>
+                            <label for='form_editMovies_title'>TITLE</label>
+                            <input type='text' id='form_editMovies_title' name='title'>
+                        </div>
+                        <div class='form-row'>
+                            <label for='form_year'>YEAR</label>
+                            <input type='text' id='form_editMovies_year' name='year'>
+                        </div>
+                        <div class='form-row'>
+                            <label for='form_editMovies_country'>COUNTRY</label>
+                            <input type='text' id='form_editMovies_country' name='country'>
+                        </div>
+                        <div class='form-row'>
+                            <label for='form_editMovies_genre'>GENRE</label>
+                            <input type='text' id='form_editMovies_genre' name='genre'>
+                        </div>
+                        <div class='form-row'>
+                            <label for='form_editMovies_poster'>POSTER (LINK)</label>
+                            <input type='text' id='form_editMovies_poster' name='poster'>
+                        </div>
+                        <div class='form-row'>
+                            <label for='form_editMovies_description'>DESCRIPTION</label>
+                            <textarea id='form_editMovies_description' rows="7" name='description'></textarea>
+                        </div>
+                        <div class="form-row buttons">
+                            <button class="btn btn-edit edit">Edit</button>
+                        </div>
+                    </form>
+        </div>                   
+    </main>   
+
+    <div class="form" hidden>
+    	<form action='#' method="post" class='reg-form'>
+            <div class='form-row'>
+                <label for='form_title'>TITLE</label>
+                <input type='text' id='form_title' name='title'>
+            </div>
+            <div class='form-row'>
+                <label for='form_year'>YEAR</label>
+                <input type='text' id='form_year' name='year'>
+            </div>
+            <div class='form-row'>
+                <label for='form_country'>COUNTRY</label>
+                <input type='text' id='form_country' name='country'>
+            </div>
+            <div class='form-row'>
+                <label for='form_genre'>GENRE</label>
+                <input type='text' id='form_genre' name='genre'>
+            </div>
+            <div class='form-row'>
+                <label for='form_poster'>POSTER (LINK)</label>
+                <input type='text' id='form_poster' name='poster'>
+            </div>
+            <div class='form-row'>
+                <label for='form_description'>DESCRIPTION</label>
+                <textarea id='form_description' rows="7" name='description'></textarea>
+            </div>
+            <div class="form-row buttons">
+                <button class="btn btn-cancel cancel">Cancel</button>
+                <button class="btn btn-add add">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/lastjs/addMovie.js"></script>
+    <script src="js/lastjs/deleteMovie.js"></script>
+
+</body>
+</html>

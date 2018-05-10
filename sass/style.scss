@@ -1,0 +1,184 @@
+// sass --watch sass/style.scss:css/style.css
+
+@import "_button-props";
+@import "_flex-props";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+header{
+    height: 100px;
+    width: 100vw;
+    background: rgb(110,204,254);
+    @extend .flex-start;
+    .title{
+        height: 100%;
+        width: 30%;
+        background: rgb(80,174,224);
+        @extend .flex-center;
+        h1{
+            font-weight: 200;
+        }
+    }
+    .main{
+        height: 100%;
+        @extend .flex-center;
+        margin-left: 50px;
+        .icon{
+            height: 40px;
+            width: 40px;
+            background: white;
+            border-radius: 50%;
+            margin-right: 20px;
+            @extend .flex-center;
+        }
+        .icon:hover{
+            cursor: pointer;
+        }
+    
+    }
+}
+
+main{
+    background: rgb(226,235,242);
+    padding: 20px 0;
+    .wraper_films{
+        position: relative;
+        height: 550px;
+        width: 60%;          
+        margin: 0 auto;
+        @extend .flex-center;
+       .films{
+           height: 80%;
+           width: 80%;          
+           border-radius: 15px;
+           position: absolute;
+           background: rgba(82, 37, 1, 0.5);
+           .films_main{
+                height: 85%;
+                width: 100%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                @extend .flex-center;
+                .wrap{
+                    height: 80%;
+                    width: 80%;    
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-template-rows: repeat(8, 1fr);
+                    grid-template-areas: "img img title title title"
+                                        "img img text text text"
+                                        "img img text text text"
+                                        "img img details details details"
+                                        "img img details details details"
+                                        "img img details details details"
+                                        "img img details details details"
+                                        "img img buttons buttons buttons";
+                    grid-gap: 10px 20px;
+                    .film_img{
+                        grid-area: img;
+                        background: url('../images/bg-film.jpg') no-repeat center;
+                        background-size: cover;
+                    }
+                    .title{
+                        grid-area: title;
+                    }
+                    .text{
+                        grid-area: text;
+                        overflow: hidden;
+                    }
+                    .details-film{
+                        grid-area: details;
+                        display: grid;
+                        overflow: hidden;
+                    }
+                    .buttons{
+                        grid-area: buttons;
+                    }
+                }
+           }
+           .film_footer{
+                background: white;
+                height: 15%;
+                width: 100%;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                color: rgb(254,124,111);
+                p{
+                    margin: auto 50px;
+                    line-height: 70px;
+                    span{
+                        height: 24px;
+                        width: 24px;
+                        background: url('./images/icon-up.png');
+                    }
+                }
+           }
+       }
+    }
+    .wraper_films:before{
+        content: '';
+        position: absolute; top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../images/bg-film.jpg') no-repeat center;
+        background-size: cover;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+   }
+}
+
+.form, .form_editMovies{
+    padding: 20px;
+    position: absolute;
+    top: 100px;
+    left: 30vw;
+    height: 450px;
+    width: 50%;
+    background: rgba(251, 251, 251, 0.856);
+    background-size: cover;
+    z-index: 10;
+    color: white;
+    border-radius: 0 0 7px 7px;
+    label{
+        color: black;
+    }
+    form{
+        @extend .flex-around;
+        height: 100%;
+        width: 100%;
+        align-items: stretch;
+    }
+    .form-row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label{
+            width: 25%;
+            margin: 5px;
+        }
+        input, textarea{
+            width: 55%;
+            border-radius: 3px;
+            border: solid rgb(175, 175, 175) 1px;
+        }
+        input{
+            height: 40px;
+        }
+    }
+    .form-row:last-child{
+        flex-direction: row;
+        margin: 20px 0 20px 0;
+    }
+}
