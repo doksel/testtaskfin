@@ -8,6 +8,8 @@ let movies = [
         actors: 'Aksel Hennie, Chiwetel Ejiofor, Jeff Daniels, Jessica  Chastain, Kate Mara, Kristen Wiig, Matt Damon, Mishael Pena, Sean Bean, Sebastian Stan'
     }
 ];
+// 13-14 строки для отображения первого фильма. Их потом или сразу нужно закомментировать
+// чтобы каждый раз не перезаписывать localStorage (не удалять содержимое)
 let serialMovies = JSON.stringify(movies);
 localStorage.setItem('movies', serialMovies);
 movies = JSON.parse(localStorage.getItem("movies"));

@@ -7,10 +7,8 @@ function addMovies(event){
     event.preventDefault();
 
     let id = (new Date().getTime());
-    // doc.querySelector('.wraper_films').setAttribute('data-movie-id', id);
-    // doc.querySelector('.delete').setAttribute('data-movie-id', id);
-    doc.querySelector('.wraper_films').id=id;
-    doc.querySelector('.delete').id=id;
+    doc.querySelector('.wraper_films').setAttribute('data-movie-id', id);
+    doc.querySelector('.delete').setAttribute('data-movie-id', id);
     console.log(doc.querySelector('.wraper_films'));
     console.log(doc.querySelector('.delete'));
     const newMovie = 

@@ -80,6 +80,9 @@ function start(){
 
         oldMain.appendChild(wraper_films);
 
+        wraper_films.setAttribute('data-movie-id',  movies[i].id);
+        btn_delete.setAttribute('data-movie-id',  movies[i].id);    
+
         btn_delete.addEventListener('click', deleteMovie);
         }
 }
