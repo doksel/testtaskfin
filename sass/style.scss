@@ -9,6 +9,7 @@
     padding: 0;
 }
 body{
+    background: rgb(226,235,242);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
@@ -43,12 +44,10 @@ header{
         .icon:hover{
             cursor: pointer;
         }
-    
     }
 }
 
 main{
-    background: rgb(226,235,242);
     padding: 20px 0;
     .wraper_films{
         position: relative;
@@ -106,22 +105,32 @@ main{
                 }
            }
            .film_footer{
-                background: white;
+                background: white;//=============== need delete this property
                 height: 15%;
                 width: 100%;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
+                @extend .flex-start;
+                border-radius: 0 0 15px 15px;
                 color: rgb(254,124,111);
-                p{
-                    margin: auto 50px;
-                    line-height: 70px;
-                    span{
-                        height: 24px;
-                        width: 24px;
-                        background: url('./images/icon-up.png');
-                    }
+                .count_comments{
+                    margin: 0 10px;
+                }
+                .icon_comments{
+                    height: 10px;
+                    width: 10px;
+                    color: rgb(254,124,111);
+                    background: url('../images/icons/icon-up.png') no-repeat center;
                 }
            }
+           .comments{
+                @extend .flex-start;
+                flex-direction: column;
+                align-items: flex-start;
+                .line{
+                    width: 100%;
+                    color: grey;
+                    margin: 10px 0;
+                }
+            }
        }
     }
     .wraper_films:before{
