@@ -1,5 +1,5 @@
-// const cancelButton = document.querySelector(".cancel");
-// cancelButton.addEventListener('click', cancelForm);
+const cancelButton = document.querySelector(".cancel");
+cancelButton.addEventListener('click', cancelForm);
 
 function cancelForm(event){
     event.preventDefault();

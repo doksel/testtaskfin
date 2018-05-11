@@ -89,13 +89,26 @@
                     <button class="btn btn-edit edit_movie">Edit</button>
                 </div>
             </form>
-        </div>                   
+        </div>
+                          
+        <div class="form_addComment"  style="position: fixed;" hidden>
+            <form action='#' method="post" class='reg-form'>
+                <div class='form-row'>
+                    <label for='form_addComment_description'>DESCRIPTION</label>
+                    <textarea id='form_addComment_description' rows="7" name='description'></textarea>
+                </div>
+                <div class="form-row buttons">
+                    <button class="btn btn-add addComment">Add</button>
+                </div>
+            </form>
+        </div>
 
         <script src="js/addMovie.js"></script>
         <script src="js/deleteMovie.js"></script>
         <script src="js/editMovie.js"></script>
         <script src="js/cancelForm.js"></script>
         <script src="js/showForm.js"></script>
+        <script src="js/addComments.js"></script>
 
     </body>
 </html>

@@ -9,7 +9,7 @@
   justify-content: flex-start;
   align-items: center; }
 
-.flex-around, .form form, .form_editMovies form {
+.flex-around, .form form, .form_editMovies form, .form_addComment form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +46,7 @@
   justify-content: flex-start;
   align-items: center; }
 
-.flex-around, .form form, .form_editMovies form {
+.flex-around, .form form, .form_editMovies form, .form_addComment form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -161,7 +161,7 @@ main {
     -ms-filter: blur(5px);
     filter: blur(5px); }
 
-.form, .form_editMovies {
+.form, .form_editMovies, .form_addComment {
   padding: 20px;
   position: absolute;
   top: 100px;
@@ -173,27 +173,31 @@ main {
   z-index: 10;
   color: white;
   border-radius: 0 0 7px 7px; }
-  .form label, .form_editMovies label {
+  .form label, .form_editMovies label, .form_addComment label {
     color: black; }
-  .form form, .form_editMovies form {
+  .form form, .form_editMovies form, .form_addComment form {
     height: 100%;
     width: 100%;
     align-items: stretch; }
-  .form .form-row, .form_editMovies .form-row {
+  .form .form-row, .form_editMovies .form-row, .form_addComment .form-row {
     display: flex;
     flex-direction: column;
     width: 100%; }
-    .form .form-row label, .form_editMovies .form-row label {
+    .form .form-row label, .form_editMovies .form-row label, .form_addComment .form-row label {
       width: 25%;
       margin: 5px; }
-    .form .form-row input, .form .form-row textarea, .form_editMovies .form-row input, .form_editMovies .form-row textarea {
+    .form .form-row input, .form .form-row textarea, .form_editMovies .form-row input, .form_editMovies .form-row textarea, .form_addComment .form-row input, .form_addComment .form-row textarea {
       width: 55%;
       border-radius: 3px;
       border: solid #afafaf 1px; }
-    .form .form-row input, .form_editMovies .form-row input {
+    .form .form-row input, .form_editMovies .form-row input, .form_addComment .form-row input {
       height: 40px; }
-  .form .form-row:last-child, .form_editMovies .form-row:last-child {
+  .form .form-row:last-child, .form_editMovies .form-row:last-child, .form_addComment .form-row:last-child {
     flex-direction: row;
     margin: 20px 0 20px 0; }
+
+.form_addComment {
+  height: 200px;
+  width: 30%; }
 
 /*# sourceMappingURL=style.css.map */

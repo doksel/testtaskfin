@@ -31,7 +31,7 @@ function addMovies(event){
     doc.querySelector('#form_poster').value = "";
     doc.querySelector('#form_description').value = "";
 
-    hiddenForm();
+    showForm();
     start();
 };
 

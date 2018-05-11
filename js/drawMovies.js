@@ -77,8 +77,6 @@ function start(){
                               
                 comments.appendChild(line);
                 comments.appendChild(textComment);
-                comments.hidden = true;
-
             }
         }else{
             movies[i].comments.innerHTML = '';
@@ -120,9 +118,7 @@ function start(){
         btn_edit.addEventListener('click', editMovie);
         btn_delete.addEventListener('click', deleteMovie);
         film_footer.addEventListener('click', showComments);
-        comments.addEventListener('click', showComments);   
-
-        
+        comments.addEventListener('click', showComments);           
     }
 }
 

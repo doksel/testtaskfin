@@ -1,25 +1,22 @@
 function showForm() {
     const form = doc.querySelector('.form');
-    form.hidden = false;
     const iconPlus = doc.querySelector('.icon');
-    iconPlus.style.transform='rotate(45deg)';
-}
-
-function hiddenForm() {
-    const form = doc.querySelector('.form');
-    form.hidden = true;
-    const iconPlus = doc.querySelector('.icon');
-    iconPlus.style.transform='rotate(90deg)';
+    if(form.hidden == true){    
+        form.hidden = false;
+        iconPlus.style.transform='rotate(45deg)';
+    }else{
+        form.hidden = true;
+        iconPlus.style.transform='rotate(90deg)';
+    }
 }
 
 function showForm_editMovie() {
     const form = doc.querySelector('.form_editMovies');
-    form.hidden = false;
-}
-
-function hiddenForm_editMovie() {
-    const form = doc.querySelector('.form_editMovies');
-    form.hidden = true;
+    if(form.hidden == true){    
+        form.hidden = false;
+    }else{
+        form.hidden = true;
+    }
 }
 
 function showComments() {
@@ -32,5 +29,15 @@ function showComments() {
     }else{
         form.style.display = "none";
         icon_comments.style.transform='rotate(360deg)';
+
+    }
+}
+
+function showForm_addComment() {
+    const form = doc.querySelector('.form_addComment');
+    if(form.hidden == true){    
+        form.hidden = false;
+    }else{
+        form.hidden = true;
     }
 }

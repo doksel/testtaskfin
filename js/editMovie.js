@@ -12,7 +12,6 @@ function editMovie(event){
     for(let i=0; i<movies.length;i++){
         if(movies[i].id == id){
             const indexMovie = movies.indexOf(movies[i]);
-            // movieId = movies[i];
 
             doc.querySelector('#form_editMovies_title').value  = movie.querySelector('.title h2').innerHTML;
             doc.querySelector('#form_editMovies_country').value  = movie.querySelector('.country').innerHTML;
@@ -39,15 +38,15 @@ function changeMovie(event){
         year: doc.querySelector('#form_editMovies_year').value,
         genre: doc.querySelector('#form_editMovies_genre').value,
         actors: doc.querySelector('#form_editMovies_poster').value,
+        comments: []
     }
-    // movieId = newMovie;
     movies.push(newMovie);
 
     let serialMovies = JSON.stringify(movies);
     localStorage.setItem('movies', serialMovies);
 
     start();
-    hiddenForm_editMovie();
+    showForm_editMovie();
 
     doc.querySelector('#form_title').value = "";
     doc.querySelector('#form_country').value = "";
