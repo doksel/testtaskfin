@@ -126,7 +126,6 @@ main {
           main .wraper_films .films .films_main .wrap .buttons {
             grid-area: buttons; }
       main .wraper_films .films .film_footer {
-        background: white;
         height: 15%;
         width: 100%;
         border-radius: 0 0 15px 15px;
@@ -140,7 +139,9 @@ main {
           background: url("../images/icons/icon-up.png") no-repeat center; }
       main .wraper_films .films .comments {
         flex-direction: column;
-        align-items: flex-start; }
+        align-items: flex-start;
+        display: none;
+        color: black; }
         main .wraper_films .films .comments .line {
           width: 100%;
           color: grey;

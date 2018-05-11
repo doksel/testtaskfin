@@ -64,10 +64,9 @@ function start(){
         icon_comments.className = 'icon_comments';
         const count_comments = doc.createElement('div');
         count_comments.className = 'count_comments';
+        count_comments.innerHTML =  movies[i].comments.length;
         const comments = doc.createElement('div');
-        comments.hidden = true;
         comments.className = 'comments';
-        console.log(movies[i].comments.length);
         if(movies[i].comments.length){
             for(let j=0; j<movies[i].comments.length;j++){
                 const line = doc.createElement('hr');
@@ -75,14 +74,15 @@ function start(){
                 const textComment = doc.createElement('p');
                 textComment.className = 'textComment';
                 textComment.innerHTML = movies[i].comments[j];
-                
-                count_comments.innerHTML =  movies[i].comments.length[j];
-                
+                              
                 comments.appendChild(line);
                 comments.appendChild(textComment);
+                comments.hidden = true;
+
             }
         }else{
             movies[i].comments.innerHTML = '';
+            count_comments.innerHTML = 0;
         }  
 
         buttons.appendChild(btn_edit);
@@ -120,6 +120,9 @@ function start(){
         btn_edit.addEventListener('click', editMovie);
         btn_delete.addEventListener('click', deleteMovie);
         film_footer.addEventListener('click', showComments);
+        comments.addEventListener('click', showComments);   
+
+        
     }
 }
 

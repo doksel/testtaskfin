@@ -17,7 +17,8 @@ function addMovies(event){
         country: doc.querySelector('#form_country').value,
         year: doc.querySelector('#form_year').value,
         genre: doc.querySelector('#form_genre').value,
-        actors: doc.querySelector('#form_poster').value
+        actors: doc.querySelector('#form_poster').value,
+        comments: []
     }
     movies.push(newMovie);
     let serialMovies = JSON.stringify(movies);
@@ -33,3 +34,6 @@ function addMovies(event){
     hiddenForm();
     start();
 };
+
+
+

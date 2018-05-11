@@ -105,7 +105,6 @@ main{
                 }
            }
            .film_footer{
-                background: white;//=============== need delete this property
                 height: 15%;
                 width: 100%;
                 @extend .flex-start;
@@ -125,6 +124,8 @@ main{
                 @extend .flex-start;
                 flex-direction: column;
                 align-items: flex-start;
+                display: none;
+                color: black;
                 .line{
                     width: 100%;
                     color: grey;

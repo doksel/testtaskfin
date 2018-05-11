@@ -39,9 +39,6 @@ function changeMovie(event){
         year: doc.querySelector('#form_editMovies_year').value,
         genre: doc.querySelector('#form_editMovies_genre').value,
         actors: doc.querySelector('#form_editMovies_poster').value,
-        comments: [
-            
-        ]
     }
     // movieId = newMovie;
     movies.push(newMovie);

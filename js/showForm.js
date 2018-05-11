@@ -23,7 +23,14 @@ function hiddenForm_editMovie() {
 }
 
 function showComments() {
-    console.log('showComment');
     const form = doc.querySelector('.comments');
-    form.hidden = false;
+    const icon_comments = doc.querySelector('.icon_comments')
+    if(form.style.display == 'none'){
+        form.style.display = "flex";
+        form.style.zIndex = 9999;
+        icon_comments.style.transform='rotate(180deg)';
+    }else{
+        form.style.display = "none";
+        icon_comments.style.transform='rotate(360deg)';
+    }
 }
